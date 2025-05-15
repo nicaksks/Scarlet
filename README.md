@@ -19,8 +19,6 @@
 # ˚₊‧꒰აCDN - Assets (v0.1.0)໒꒱ ‧₊˚
 ─ **Language:** `PHP (8.4.5)`<br>
 
-# ⸜Domain - scarlet-bs.fun⸝♡
-
 ```
    /\_/\   (\ __ /)   A__A
   ( ˶•o•˶)  ( •ω• )  (•⤙• )
