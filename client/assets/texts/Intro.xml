@@ -1,0 +1,147 @@
+<bs-scenario>
+  <scene id="00000" name="인트로" />
+  <summary goal="알 수 없음" desc="???"/>
+  <contents>
+    <methodLoader namespace="Intro" />
+    <keyControl key="back" enable="false" />
+    <bgmOff />
+    <wait ms="1000" />
+
+    <se src="BGM_PART_FACTORY_METAL_GATE" />
+    <effectText text="Fiat lux" ms="1000" delay="1000" />
+    <wait ms="1500" />
+    
+    <se src="BGM_PART_FACTORY_METAL_GATE" />
+    <effectText text="Game_Process/Intro/Intro4" ms="1000" delay="1000" />
+    <wait ms="1500" />
+    <se src="BGM_PART_FACTORY_METAL_SQUEAK_2" />
+    <bgm src="Map_POWCAMP" />
+    <wait ms="500" />
+    <parallel>
+      <skip type="show" desc="인트로를 건너뛸까요?" />
+      <skip type="hide" />
+      <bgmOff />
+      <fadeOut type="nomal" ms="10" />
+      <scenarioLoad id="00001" />
+    </parallel>
+    <keyControl key="back" enable="true" />
+    <fadeOut type="eye" ms="10" />
+    <img src="Background_S1" id="배경" target="default" x="640" y="360" z="1" a="1" width="180" height="150" ms="10" />
+    <sync />
+    <parallel>
+      <img src="ResourceMat_Nadja1024" id="나쟈" target="nadja" x="740" y="0" z="10" a="1" width="140" height="140" ms="1000" />
+      <imgMove id="나쟈" target="nadja" x="640" y="0" z="10" ms="4000" />
+    </parallel>
+    <fadeIn type="eye" ms="4500" />
+    <sync />
+    <dialogue name="???" face="Resource_NadjaFace" text="17M-RFT... 실험체 신체 개조 완료." />
+    <dialogue name="???" text="맥박 정상, 호흡 정상."/>
+    <dialogue name="???" text="지금 당장 회복실로 이동시키세요."/>
+    <se src="BGM_PART_CITY_FENCE" />
+    <wait ms="300" />
+    <shake level="3" speed="10" fq="50" ms="1000" />
+    <imgMove id="배경" x="640" y="460" z="1" ms="300" />
+    <imgMove id="나쟈" target="nadja" x="660" y="100" z="10" ms="300" />
+    <sync />
+    <wait ms="500" />
+    <imgMove id="배경" x="640" y="360" z="1" ms="1000" />
+    <imgMove id="나쟈" target="nadja" x="660" y="0" z="10" ms="1000" />
+    <sync />
+    <dialogue name="???" text="응?_벌써 정신을 차린 건가?" />
+    <se src="BGM_PART_FACTORY_CHAIN_1" />
+    <wait ms="300" />
+    <imgMove id="배경" x="740" y="360" z="1" ms="300" />
+    <imgMove id="나쟈" target="nadja" x="780" y="0" z="10" ms="300" />
+    <shake level="3" speed="10" fq="50" ms="1000" />
+    <wait ms="500" />
+    <imgMove id="배경" x="640" y="360" z="1" ms="1000" />
+    <imgMove id="나쟈" target="nadja" x="680" y="0" z="10" ms="1000" />
+    <sync />
+    <dialogue name="???" text="생각보다 일찍 깨어났네." /> <!-- 대체된 문장 -->
+    <se src="BGM_PART_FACTORY_CHAIN_2" />
+    <shake level="3" speed="10" fq="50" ms="1000" />
+    <imgMove id="배경" x="540" y="360" z="1" ms="300" />
+    <imgMove id="나쟈" target="nadja" x="540" y="0" z="10" ms="300" />
+    <wait ms="300" />
+    <imgMove id="배경" x="640" y="360" z="1" ms="1000" />
+    <imgMove id="나쟈" target="nadja" x="640" y="0" z="10" ms="1000" />
+    <wait ms="1000" />
+    <dialogue name="???" text="그래, 많이 혼란스럽겠지." />
+    <dialogue name="???" text="너무 발버둥치지 않으면 이 상황에 대해 설명해 줄게." /> <!-- 대체된 문장 -->
+
+    <imgAlpha id="나쟈" a="0" ms="1000" />
+    <wait ms="1000" />
+    <miniMap a="1" ms="10" />
+    <wait ms="2000" />
+    <sync />
+    <dialogue name="???" text="이곳의 이름은 루미아 섬." />
+    <dialogue name="???" text="당분간 여기 머무르게 될 테니 이름이라도 알아 둬." /> <!--새로 추가된 문장-->
+    <wait ms="300"/>
+    <dialogue name="???" text="이 섬에서 네가 앞으로 해야 할 일은 하나야."/> <!--새로 추가된 문장-->
+    <dialogue name="???" text="제한 시간 내에 다른 9명과 목숨을 걸고 경쟁해서 마지막까지 살아남으면 돼." /> <!--수정된 문장-->
+    <miniMap a="0" ms="500" />
+    <imgMove id="나쟈" target="nadja" x="640" y="0" z="10" ms="500" />
+    <sync />
+    <imgAlpha id="나쟈" a="1" ms="500" />
+    <dialogue name="???" text="후후... 아직 상황 파악이 제대로 되지 않는 모양이네." />
+    <dialogue name="???" text="하지만 널 납득시키도록 설명할 시간이 없어서 말이야."/> <!--대체된 문장-->
+    <dialogue name="???" text="일단은 직접 경험해 보도록 해." /> <!--대체된 문장-->
+    <dialogue name="???" text="그럼_행운을 빌어줄게." />
+    <skip type="hide" />
+    <keyControl key="back" enable="false" />
+    <img src="Screen_Shot" id="캡쳐" target="default" x="640" y="360" z="20" a="1" ms="10" />
+    <wait ms="1000" />
+    <noise id="캡쳐" level="0.01" speed="3" ms="300" />
+    <wait ms="1000" />
+    <noise id="캡쳐" level="0.02" speed="15" ms="2000" />
+    <parallel>
+      <parallel>
+        <bgm src="RANK" />
+        <wait ms="4500" />
+        <img src="Logo_Korean" id="로고" target="default" x="640" y="360" z="20" a="1" width="729" height="294" ms="100" absolute="true" />
+        <wait ms="4500" />
+        <imgAlpha id="로고" a="0" ms="1000" />
+      </parallel>
+      <parallel>
+        <wait ms="48000" />
+        <bgmOff />
+      </parallel>
+      <wait ms="1000" />
+      <fadeOut type="nomal" ms="1000" />
+      <sync />
+      <imgAlpha id="나쟈" a="0" ms="10" />
+      <imgAlpha id="캡쳐" a="0" ms="10" />
+      <imgAlpha id="배경" a="0" ms="10" />
+      <imgAlpha id="보조" a="0" ms="10" />
+      <fadeIn type="nomal" ms="300" />
+      <sync />
+      <wait ms="7000" />
+      <img src="Background_O1" id="연구실" target="default" x="640" y="360" z="1" a="1" width="150" height="120" ms="1000" />
+      <img src="ResourceMat_Nadja1024" id="나쟈2" target="nadja" x="940" y="0" z="10" a="1" width="140" height="140" ms="500" />
+      <imgMove id="나쟈2" target="nadja" x="840" y="0" z="10" ms="4000" />
+      <sync />
+      <imgMove id="나쟈2" target="nadja" x="640" y="0" z="10" ms="300" />
+      <dialogue name="???" text="네가 이번에 새로 온 연구원이구나?" />
+      <dialogue name="???" text="예전 기록 영상들을 둘러보고 있었나봐?" />
+      <dialogue name="나쟈" text="내 이름은 나쟈." />
+      <dialogue name="나쟈" text="당분간 네 안내를 맡을 연구원이야." />
+      <imgSize id="나쟈2" width="170" height="170" ms="500" />
+      <wait ms="500" />
+      <dialogue name="나쟈" text="이건 연구 서약서야. 아직 작성 안 했지?" />
+      <dialogue name="나쟈" text="실험 과정에서 어떤 사고를 당해도 불만을 제기하지 않겠다는 내용인데..." />
+      <dialogue name="나쟈" text="굳이 다 읽을 필요는 없고." />
+      <dialogue name="나쟈" text="그 밑에 네 이름을 적으면 돼." />
+      <createNickname />
+      <dialogue name="나쟈" text="좋아, 그럼 이제부터 본격적인 실험 방법을 알아보러 가자." />
+      <dialogue name="나쟈" text="모니터링룸은 이쪽이야." />
+      <imgMove id="나쟈2" target="nadja" x="700" y="0" z="10" ms="500" />
+      <sync />
+      <imgMove id="나쟈2" target="nadja" x="-600" y="0" z="10" ms="500" />
+      <fadeOut type="nomal" ms="1000" />
+      <door type="close" ms="1500" text="튜토리얼" />
+      <wait ms="3000" />
+      <sync />
+      <sceneLoad scene="Ingame" scenarioID="10101" />
+    </parallel>
+  </contents>
+</bs-scenario>

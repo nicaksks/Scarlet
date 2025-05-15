@@ -1,0 +1,47 @@
+<bs-scenario>
+        <scene id="00001" name="인트로" />
+        <summary goal="알 수 없음" desc="???"/>
+        <contents>
+                <keyControl key="back" enable="false" />
+                <fadeIn type="nomal" ms="10" />
+                <parallel>
+                        <bgm src="RANK" />
+                        <wait ms="4500" />
+                        <img src="Logo_Korean" id="로고" x="640" y="360" z="20" a="1" width="729" height="294" ms="100" absolute="true" />
+                        <wait ms="4500" />
+                        <imgAlpha id="로고" a="0" ms="1000" />
+                </parallel>
+                <parallel>
+                        <wait ms="48000" />
+                        <bgmOff />
+                </parallel>
+                <methodLoader namespace="Intro" />
+                <wait ms="10000" />
+                <img src="Background_O1" id="연구실" target="default" x="640" y="360" z="1" a="1" width="150" height="120" ms="1000" />
+                <img src="ResourceMat_Nadja1024" id="나쟈2" target="nadja" x="940" y="0" z="10" a="1" width="140" height="140" ms="500" />
+                <imgMove id="나쟈2" target="nadja" x="840" y="0" z="10" ms="4000" />
+                <sync />
+                <imgMove id="나쟈2" target="nadja" x="640" y="0" z="10" ms="300" />
+                <dialogue name="???" text="네가 이번에 새로 온 연구원이구나?" face="Resource_NadjaFace"/>
+                <dialogue name="???" text="예전 기록 영상들을 둘러보고 있었나봐?" />
+                <dialogue name="나쟈" text="내 이름은 나쟈." />
+             <dialogue name="나쟈" text="당분간 네 안내를 맡을 연구원이야." />
+                <imgSize id="나쟈2" width="170" height="170" ms="500" />
+                <wait ms="500" />
+                <dialogue name="나쟈" text="이건 연구 서약서야. 아직 작성 안 했지?" />
+                <dialogue name="나쟈" text="실험 과정에서 어떤 사고를 당해도 불만을 제기하지 않겠다는 내용인데..." />
+                <dialogue name="나쟈" text="굳이 다 읽을 필요는 없고." />
+                <dialogue name="나쟈" text="그 밑에 네 이름을 적으면 돼." />
+    <createNickname />
+                <dialogue name="나쟈" text="좋아, 그럼 이제부터 본격적인 실험 방법을 알아보러 가자." />
+                <dialogue name="나쟈" text="모니터링룸은 이쪽이야." />
+                <imgMove id="나쟈2" target="nadja" x="700" y="0" z="10" ms="500" />
+                <sync />
+                <imgMove id="나쟈2" target="nadja" x="-600" y="0" z="10" ms="500" />
+                <fadeOut type="nomal" ms="1000" />
+                <door type="close" ms="1500" text="튜토리얼" />
+                <wait ms="3000" />
+                <sync />
+                <sceneLoad scene="Ingame" scenarioID="10101" />
+        </contents>
+</bs-scenario>

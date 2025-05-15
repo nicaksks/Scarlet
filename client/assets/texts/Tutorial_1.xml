@@ -1,0 +1,731 @@
+<bs-scenario>
+  <scene id="10101" name="튜토리얼" />
+  <summary goal="나쟈의 설명을 듣고 따라하기" desc="연구원 나쟈에게 실험(게임 진행)의 기초를 배워보세요."/>
+  <contents>
+    <introControl type="start" text="튜토리얼"/>
+    <bgmOff/>
+    <keyControl key="back" enable="false" />
+    <methodLoader namespace="Tutorial" />
+    <ingameUIControl target="fieldBtn2" enable="false" />
+    <ingameUIControl target="fieldBtn3" enable="false" />
+    <ingameUIControl target="chatBtn" enable="false" />
+    <ingameUIControl target="aliveBtn" enable="false" />
+    <ingameUIControl target="invenVisible" enable="false" />
+    <ingameUIControl target="naviVisible" enable="false" />
+    <ingameUIControl target="potentialBtnVisible" enable="false" />
+    <ingameUIControl target="emoji" enable="false" />
+    <ingameUIControl target="rememberBtn" enable="false" />
+    <introControl type="wait" />
+    <keyControl key="back" enable="true" />
+    <clickBlock enable="true" />
+    <ingameLoad/>
+    <parallel>
+      <searchResult type="item" itemCode="51013" />
+      <searchResult type="item" itemCode="11001" />
+    </parallel>
+    <ingameContextControl type="fieldRestricted" num="2" />
+    <ingameContextControl type="fieldRestricted" num="3" />
+    <ingameContextControl type="fieldRestricted" num="4" />
+    <ingameContextControl type="fieldRestricted" num="5" />
+    <ingameContextControl type="fieldRestricted" num="6" />
+    <ingameContextControl type="fieldRestricted" num="7" />
+    <ingameContextControl type="fieldRestricted" num="9" />
+    <ingameContextControl type="fieldRestricted" num="10" />
+    <ingameContextControl type="fieldRestricted" num="11" />
+    <ingameContextControl type="fieldRestricted" num="12" />
+    <ingameContextControl type="fieldRestricted" num="13" />
+    <ingameContextControl type="fieldRestricted" num="14" />
+    <ingameContextControl type="fieldRestricted" num="16" />
+    <ingameContextControl type="fieldRestricted" num="17" />
+    <ingameContextControl type="fieldRestricted" num="18" />
+    <ingameContextControl type="fieldRestricted" num="19" />
+    <ingameContextControl type="fieldRestricted" num="20" />
+    <ingameContextControl type="fieldRestricted" num="21" />
+    <fieldTimer timer="180" />
+    <switch id="start" value="true" />
+
+    <parallel>
+      <wait ms="180000" />
+      <condition switch="start">
+        <fieldTimer type="stop" />
+      </condition>
+    </parallel>
+
+    <dialogue name="나쟈" text="실험이 시작되면 제한시간 안에 여길 벗어나야 해." face="Resource_NadjaFace" x="0" y="0" skip="false" />
+
+    <dialogue name="나쟈" text="오른쪽 아래에 있는 지도 모양의 버튼을 터치해 봐." skip="false" />
+    
+    <cursor type="caption" /> 
+    <cursor type="show" />
+    <cursor type="move" target="fieldBtn1" ms="300" />
+    <wait ms="300" />
+    <cursor type="caption" text="미니맵 열기"/> 
+    <cursor type="effect" />
+    <cursor type="click" />
+    <clickBlock enable="false" />
+
+    <contextWait type="miniMapState" condition="equal" />
+    <keyControl key="back" enable="false" />
+    <clickBlock enable="true" />
+    <cursor type="caption" />
+    <cursor type="move" />
+
+    <ingameUIControl target="fieldBtnVisible" enable="false" />
+    <dialogue name="나쟈" text="미니맵에서 원하는 지역을 터치하면 다른 지역으로 이동할 수 있어."/>
+    <dialogue name="나쟈" text="우선 [b]등대[/b]로 이동해 볼까?" skip="false" />
+
+    <clickBlock enable="true" />
+
+    <cursor type="show" />
+    <cursor type="move" target="lighthouse" ms="300" />
+    <wait ms="300" />
+    <cursor type="caption" text="등대로 이동"/>
+    <cursor type="effect" />
+    <cursor type="click" />
+
+    <contextWait type="miniMapState" condition="not" />
+    <cursor type="hide" />
+
+    <contextWait type="curField" condition="equal" value="22" />
+    <switch id="start" value="false" />
+    <fieldTimer timer="180" type="stop" />
+    <keyControl key="back" enable="true" />
+    <wait ms="1000" />
+
+    <dialogue name="나쟈" text="등대에 도착했어." />
+    <dialogue name="나쟈" text="여기서 문제! 실험에서 살아남으려면 어떻게 해야 할까?" />
+    <clickBlock enable="false" />
+    <choice id1="sel1" text1="다른 참가자들을 찾아 공격한다." id2="sel2" text2="구석을 찾아 숨는다." />
+    <clickBlock enable="true" />
+    <condition switch="sel1">
+        <dialogue name="나쟈" text="맞아, 어차피 금지구역이 점점 늘어나." />
+		<dialogue name="나쟈" text="섬 전체가 금지구역이 되는 순간 모두 죽는 거야." />
+        <dialogue name="나쟈" text="살아서 나가는 유일한 방법은 그전에 최후의 1인이 되는 거야." />
+    </condition>
+    <condition switch="sel2">
+        <dialogue name="나쟈" text="소용없어. 금지구역이 점점 늘어나거든." />
+		<dialogue name="나쟈" text="섬 전체가 금지구역이 되는 순간 모두 죽는 거야." />
+        <dialogue name="나쟈" text="살아서 나가는 유일한 방법은 그전에 최후의 1인이 되는 거야." />
+    </condition>
+
+    <wait ms="500" />
+    <ingameUIControl target="noiseSound" />
+    <wait ms="1000" />
+    <dialogue name="나쟈" text="잠깐... 지금 무슨 소리 들리지 않았어?" x="0" y="-200"/>
+
+    <ingameUIControl target="fakeDeadNoti" value="01801" />
+    <wait ms="2500" />
+    <dialogue name="나쟈" text="멀지 않은 곳에서 누군가 죽은 것 같아." /> <!--추가된 문장-->
+    <dialogue name="나쟈" text="서둘러, 꾸물거리다간 너도 저 사람처럼 될 거야." />
+    <wait ms="500" />
+    <dialogue name="나쟈" text="몸을 지키려면 먼저 상대방을 공격할 무기를 갖춰야겠지.@@주변을 살펴보자." x="0" y="0" skip="false" />
+    <cursor type="move"  target="search" ms="100" />
+    <wait ms="300" />
+    <cursor type="caption" />
+    <cursor type="show" />
+    <dialogue name="나쟈" text="화면 중앙을 터치하면 주변을 탐색할 수 있어." x="0" y="-200" />
+
+    <cursor type="caption" text="지역탐색"/>
+    <cursor type="effect" />
+    <cursor type="click" />
+
+    <keyControl key="back" enable="false" />
+    <wait ms="1700" />
+    <dialogue name="나쟈" text="철광석은 무기는 아니지만 유용한 재료 아이템이야." x="0" y="-200" /> <!--철광석이라..! 삭제-->
+    <dialogue name="나쟈" text="일단 챙겨두자." />
+    <cursor type="move" target="popupConfirm" ms="300" />
+    <cursor type="caption" text="아이템 획득"/>
+    <wait ms="300" />
+    <cursor type="effect" />
+    <cursor type="click" />
+
+    <ingameUIControl target="invenVisible" enable="true" />
+    <cursor type="move" target="invenSlot1" ms="300"/> <!--인벤토리로 가는 좌표-->
+    <introduce type="inven" target="invenCenter" />
+
+    <keyControl key="back" enable="true" />
+    <wait ms="300" />
+    <cursor type="move"  target="search" ms="300" />
+    <cursor type="caption" text="지역탐색"/>
+    <wait ms="300" />
+    <cursor type="effect" />
+    <cursor type="click" />
+
+    <keyControl key="back" enable="false" />
+    <wait ms="1700" />
+    <dialogue name="나쟈" text="너클은 기초적인 권법 무기야.@@강하진 않지만 당장은 쓸만할 거야."/>
+    <cursor type="move" target="popupConfirm" ms="300" />
+    <cursor type="caption" text="아이템 획득"/>
+    <wait ms="300" />
+    <cursor type="effect" />
+    <cursor type="click" />
+    <keyControl key="back" enable="true" />
+    <wait ms="300" />
+    <dialogue name="나쟈" text="아이템을 조합하면 더 높은 등급의 아이템을 만들 수 있어." x="0" y="0" skip="false" /> <!--두 삭제-->
+    <dialogue name="나쟈" text="[FFFFFF]너클[-]로 제작할 수 있는 아이템은 뭐가 있을까?" x="0" y="0" skip="false" />
+    <cursor type="move" target="invenSlot2" ms="300" />
+    <cursor type="caption" text="아이템 살펴보기"/>
+    <ingameUIControl target="invenSlot" slot="0" />
+
+    <wait ms="300" />
+    <cursor type="effect" />
+    <ingameUIControl target="invenSlot" slot="0" />
+    <cursor type="click" />
+    <keyControl key="back" enable="false" />
+    <wait ms="300" />
+
+    <cursor type="move" target="popupCreate" ms="300" />
+    <cursor type="caption" text="제작창 열기"/>
+    <wait ms="300" />
+    <cursor type="effect" />
+    <cursor type="click" />
+    <wait ms="300" />
+    <cursor type="move" target="makeItemSlot" ms="300" />
+    <cursor type="caption" text="제작할 아이템 선택"/>
+    <cursor type="effect" />
+    <cursor type="click" />
+    <cursor type="move" x="790" y="394" ms="300" />
+    <wait ms="300" />
+
+    <dialogue name="나쟈" text="아까 찾은 철광석과 조합하면 [b][32CD32]아이언너클[-][/b]을 만들 수 있어!" x="0" y="-200" />
+    <cursor type="move" target="makeItemCreate" ms="300" />
+	<cursor type="size" width="194" height="64"/>
+    <cursor type="caption" text="선택한 아이템 제작하기"/>
+    <wait ms="300" />
+    <cursor type="effect" />
+    <cursor type="click" />
+    <keyControl key="back" enable="true" />
+    <wait ms="300" />
+    <cursor type="move" target="invenSlot1" ms="300" />
+    <dialogue name="나쟈" text="제작한 아이템은 가방에 들어와.@@바로 장착해보자."/>
+    <wait ms="300" />
+
+    <cursor type="move" target="invenSlot1" ms="300" />
+    <cursor type="caption" text="아이템 살펴보기"/>
+    <wait ms="300" />
+    <keyControl key="back" enable="false" />
+    <cursor type="effect" />
+    <cursor type="click" />
+    <cursor type="move" target="popupConfirm" ms="300" />
+    <cursor type="caption" text="장착하기"/>
+    <wait ms="300" />
+    <cursor type="effect" />
+    <cursor type="click" />
+    <keyControl key="back" enable="true" />
+
+    <ingameUIControl target="invenRotate" enable="false" />
+    <cursor type="hide" />
+    <contextWait type="equip" condition="equal" value="11007" />
+
+	<loop switch="equipWeaponUpdate1">
+	  <contextWait type="equip" condition="equal" value="11007" />
+      <ingameContextControl type="characterUpdateOffence" value="15"/>
+	   <contextWait type="unequip" condition="equal" value="weapon" />
+      <ingameContextControl type="characterUpdateOffence" value="0"/>
+	</loop>
+	
+	<loop switch="equipWeaponUpdate2">
+	  <contextWait type="equip" condition="equal" value="13000" />
+      <ingameContextControl type="characterUpdateOffence" value="1"/>
+	   <contextWait type="unequip" condition="equal" value="weapon" />
+      <ingameContextControl type="characterUpdateOffence" value="0"/>
+	</loop>
+	
+	<loop switch="equipWeaponUpdate3">
+	  <contextWait type="equip" condition="equal" value="11007" />
+	  <ingameContextControl type="characterUpdateOffence" value="15"/>
+	   <contextWait type="equip" condition="equal" value="13000" />
+      <ingameContextControl type="characterUpdateOffence" value="1"/>
+	</loop>
+	
+	<loop switch="equipArmorUpdate1">
+	<contextWait type="equip" condition="equal" value="22039" />
+	 <ingameContextControl type="characterUpdateDefence" value="65"/>
+	 <contextWait type="unequip" condition="equal" value="chest_protector" />
+      <ingameContextControl type="characterUpdateDefence" value="0"/>
+	</loop>
+	
+	<loop switch="equipArmorUpdate2">
+	 <contextWait type="equip" condition="equal" value="21020" />
+	 <ingameContextControl type="characterUpdateDefence" value="45"/>
+	 <contextWait type="unequip" condition="equal" value="head_protector" />
+     <ingameContextControl type="characterUpdateDefence" value="0"/>
+	</loop>
+
+    <ingameUIControl target="invenRotate" enable="true" />
+    <ingameUIControl target="fieldBtn1" enable="true" />
+    <dialogue name="나쟈" text="이제 무기는 구했으니, 음식을 준비해볼까?" />
+    <explain type="hide" />
+    <wait ms="300" />
+
+    <cursor type="move" ms="10" />
+    <cursor type="show" />
+    <dialogue name="나쟈" text="가장 손쉬운 요리 재료는 뜨거운물이야." x="0" y="0"/>
+    <dialogue name="나쟈" text="어떤 재료든 삶아버리면 그럭저럭 먹을 만하거든." x="0" y="0"/>
+    <dialogue name="나쟈" text="뜨거운물은 제작으로만 얻을 수 있어." x="0" y="0" skip="false" />
+    <dialogue name="나쟈" text="그런데 재료는 어디서 구해야 할까?" x="0" y="0" skip="false" />
+    <ingameUIControl target="naviVisible" enable="true" />
+    <dialogue name="나쟈" text="화면 왼쪽 위에 있는 빨간색 목표설정 버튼을 눌러봐." x="0" y="-200" />
+
+    <keyControl key="back" enable="false" />
+
+    <cursor type="move" target="naviOpen" ms="300" />
+    <cursor type="caption" text="목표아이템 설정"/>
+    <wait ms="300" />
+    <cursor type="effect" />
+    <cursor type="click" />
+
+    <ingameContextControl type="navigator" itemCode="51006" />
+    <cursor type="move" target="hotWater" ms="300" />
+    <cursor type="caption" text="목표아이템 선택"/>
+    <wait ms="300" />
+    <cursor type="effect" />
+    <cursor type="click" />
+
+    <wait ms="300" />
+    <cursor type="move" target="naviClose" ms="300" />
+    <cursor type="effect" />
+    <cursor type="click" />
+    <keyControl key="back" enable="true" />
+
+    <ingameUIControl target="navigatorOpenBtn" enable="false" />
+    <ingameUIControl target="makeItemTargetBtn" enable="false" />
+
+    <cursor type="move" target="naviInfo" ms="300" />
+    <wait ms="300" />
+    <introduce type="navi" target="naviKo"/>
+    <dialogue name="나쟈" text="내비게이션은 목표 아이템을 선택하면@@제작에 필요한 재료와 발견 지역을 알려주는 유용한 장치야." x="0" y="-200" />
+    <dialogue name="나쟈" text="마침 이곳에 라이터가 있는 모양인데 한번 찾아볼까?" x="0" y="-200" />
+
+    <cursor type="hide" />
+    <clickBlock enable="true" />
+    <ingameUIControl target="fieldBtn1" enable="false" />
+
+    <loop switch="disable_item_abandon">
+      <contextWait type="itemPopupState" condition="equal" />
+      <condition switch="disable_item_abandon">
+        <ingameUIControl target="itemInfoBtn3" enable="false" />
+      </condition>
+    </loop>
+
+    <parallel>
+      <searchResult type="item" itemCode="51007" quantity="1" field="3|10|22" />
+    </parallel>
+
+    <explain type="pivot" pivot="Center" />
+    <explain type="setText" text="라이터를 찾아보자." target="topCenter"/>
+    <explain type="ui" state="Basic" />
+    <explain type="show" />
+    <wait ms="300" />
+
+    <cursor type="move" target="search" ms="100" />
+    <cursor type="show" />
+    <cursor type="caption" text="지역탐색"/>
+    <wait ms="200" />
+
+    <cursor type="effect" />
+    <cursor type="click" />
+    <keyControl key="back" enable="false" />
+    <wait ms="1700" />
+
+    <cursor type="move" target="popupConfirm" ms="300" />
+    <wait ms="300" />
+    <cursor type="show" />
+    <cursor type="caption" text="획득"/>
+    <cursor type="effect" />
+    <cursor type="click" />
+
+    <contextWait type="item" condition="equal" value="51007" />
+    <trackingEvent name="tutorialGetLighter"/>
+
+    <switch id="quest3" value="false" />
+    <explain type="hide" />
+    <cursor type="hide" />
+    <wait ms="200" />
+
+    <dialogue name="나쟈" text="잘했어. 다음에 필요한 재료는 물이야." x="0" y="0" /> <!--수정된 문장-->
+    <dialogue name="나쟈" text="물은 어디서 찾아야 할까?"/>
+    <dialogue name="나쟈" text="좌측 상단에 있는 내비게이션을 참고해서@@물이 있는 지역으로 이동해보자."/><!--추가된 문장-->
+
+    <clickBlock enable="false" />
+    <keyControl key="back" enable="true" />
+
+    <ingameUIControl target="fieldBtn1" enable="true" />
+    <explain type="pivot" pivot="Center" />
+    <explain type="setText" text="왼쪽 내비게이션을 보고 [b]물[/b]이 발견되는 지역으로 이동해 찾아보자." target="topCenter" />
+    <explain type="ui" state="Basic" />
+    <explain type="show" />
+
+    <ingameUIControl target="fieldBtnVisible" enable="true" />
+    <!-- 3.0.02 핫픽스 제외
+    <introduce type="fieldBtn"/>
+        -->
+	
+	<!-- 이동 버튼을 누르지 않고 가만히 있으면 안내 커서가 나온다 -->
+	<switch id="helpQuest4" value="true" />
+    <loop switch="quest4">
+      <contextWait type="item" condition="not" value="32004" />
+      <condition switch="quest4">
+        <searchResult type="item" itemCode="32004" quantity="1" field="1|5|6|18|19|21" />
+		<condition switch="helpQuest4">
+			<wait ms="5000" />
+			<condition switch="helpQuest4">
+			<clickBlock enable="false" />
+			<cursor type="move" target="fieldBtn1" ms="300" />
+			<cursor type="show" />
+			<cursor type="caption" text="지역 이동"/>
+			<cursor type="effect" />
+			<cursor type="visualOnly" />
+			<wait ms="500" />
+			<switch id="helpQuest4" value="false" />
+			</condition>
+			</condition>
+        <wait ms="1000" />
+      </condition>
+    </loop>
+	
+    <contextWait type="miniMapState" condition="equal" />
+	<cursor type="hide" />
+	<switch id="helpQuest4" value="false" />
+    <dialogue name="나쟈" text="현재 개방되어 있는 지역 중에서@@물을 발견할 수 있는 곳은 단 한 곳뿐이야."/>
+
+    <loop switch="area_check">
+      <contextWait type="miniMapState" condition="equal" />
+	  <cursor type="hide" />
+	  <switch id="helpQuest4" value="false" />
+      <condition switch="area_check">
+        <contextWait type="miniMapState" condition="not" />
+		 <cursor type="hide" />
+      </condition>
+      <condition switch="area_check">
+	   <cursor type="hide" />
+        <contextWait type="curField" condition="not" value="1" />
+      </condition>
+      <condition switch="area_check">
+        <wait ms="300" />
+        <dialogue name="나쟈" text="여기선 물을 찾을 수 없어..@@내비게이션을 다시 한번 확인해봐."/>
+		<switch id="helpQuest4" value="true" />
+      </condition>
+    </loop>
+
+    <contextWait type="curField" condition="equal" value="1" />
+    <loop switch="quest4">
+      <contextWait type="itemPopupState" condition="equal" />
+      <condition switch="quest4">
+        <ingameUIControl target="itemInfoBtn2" enable="false" />
+      </condition>
+    </loop>
+
+    <contextWait type="item" condition="equal" value="32004" />
+    <switch id="area_check" value="false" />
+
+    <ingameUIControl target="fieldBtn1" enable="false" />
+    <switch id="area_check" value="false" />
+    <switch id="quest4" value="false" />
+    <trackingEvent name="tutorialGetWater"/>
+    <explain type="hide" />
+    <dialogue name="나쟈" text="잘했어! 이제 [b]뜨거운물[/b]을 한번 만들어봐.@@제작 방법은 기억하고 있지?"/>
+
+    <explain type="pivot" pivot="Center" />
+    <explain type="setText" text="오른쪽 가방에서 라이터와 물을 조합해보자." target="topCenter" />
+    <explain type="ui" state="Basic" />
+    <explain type="show" />
+
+    <parallel>
+      <contextWait type="makeItemPopupState" condition="equal"/>
+      <clickBlock enable="true" />
+      <keyControl key="back" enable="false"/>
+      <wait ms="100"/>
+      <introduce type="make" target="make"/>
+      <clickBlock enable="false" />
+      <keyControl key="back" enable="true" />
+    </parallel>
+
+    <contextWait type="item" condition="equal" value="51006" />
+    <trackingEvent name="tutorialCraftBoilingWater"/>
+    <explain type="hide" />
+
+    <switch id="quest2" value="false" />
+
+    <ingameUIControl target="navigatorOpenBtn" enable="true" />
+    <ingameUIControl target="makeItemTargetBtn" enable="true" />
+
+    <dialogue name="나쟈" text="잘하는 걸?@@뜨거운물을 만들었으니 이제 식재료만 구하면 돼." x="0" y="0" skip="false" />
+    <dialogue name="나쟈" text="이 주변을 다시 한번 탐색해볼까?" x="0" y="0" skip="false" />
+
+    <explain type="pivot" pivot="Center" />
+    <explain type="setText" text="화면 중앙을 눌러 식재료를 찾아보자." target="topCenter" />
+    <explain type="ui" state="Basic" />
+    <explain type="show" />
+
+    <parallel>
+      <searchResult type="monster" monsterCode="2" target="물수리" health="normal" myDmg="30" taken="25" monsterHealth="40" monsterMaxHealth="40" />
+      <ingameUIControl target="bloodEffect" health="slight"/>
+      <clickBlock enable="true" />
+      <wait ms="3000" />
+
+      <dialogue name="나쟈" text="물수리가 정신을 못 차리고 있어!" x="0" y="-200" />
+      <dialogue name="나쟈" text="한 번 더 물수리를 찾아서 마무리짓자!" x="0" y="-200" />
+
+      <cursor type="move"  target="search" ms="300" />
+      <cursor type="caption" text="지역탐색"/>
+      <cursor type="show" />
+      <cursor type="effect" />
+      <cursor type="click" />
+      <cursor type="hide" />
+
+      <wait ms="300" />
+      <clickBlock enable="false" />
+  
+      <parallel>
+        <contextWait type="gameStatus" condition="equal" value="battle" />
+        <explain type="pivot" pivot="Right" />
+        <explain type="ui" state="None" />
+        <explain type="setText" text="상대방을 공격할 수 있습니다." target="battleAttack" />
+        <explain type="show" />
+      </parallel>
+
+      <searchResult type="monster" monsterCode="2" target="물수리" health="critical" myDmg="30" kill="true" monsterHealth="10" monsterMaxHealth="40" />
+      <ingameUIControl target="bloodEffect" health="slight"/>
+      <explain type="hide" />
+      <clickBlock enable="true" />
+      <keyControl key="back" enable="false" />
+      <wait ms="2000" />
+
+      <dialogue name="나쟈" text="첫 전투의 소감이 어때?"/>
+      <dialogue name="나쟈" text="전투에서 승리하면 전리품을 얻을 수 있어."/>
+      <dialogue name="나쟈" text="마침 쓸만한 식재료들이 보이는 걸?"/>
+      <dialogue name="나쟈" text="새알도 좋지만 지금은 [b]약초[/b]가 유용하겠어.@@[b]약초[/b]를 가져가자." />
+
+      <clickBlock enable="true" />
+      <cursor type="move" />
+      <cursor type="caption" />
+      <cursor type="show" />
+      <wait ms="200" />
+      <cursor type="move" target="corpseitem3" ms="300" />
+      <cursor type="caption" text="전리품 선택"/>
+      <cursor type="effect" />
+      <cursor type="click" />
+
+      <cursor type="caption"/>
+      <cursor type="move" target="corpseGet" ms="300" />
+	  <cursor type="size" width="116" height="72" />
+      <cursor type="effect" />
+      <cursor type="click" />
+
+      <clickBlock enable="false" />
+      <contextWait type="item" condition="equal" value="31011" />
+      <cursor type="hide" />
+      <keyControl key="back" enable="true" />
+
+      <dialogue name="나쟈" text="이제 뜨거운물과 약초로 [b][32CD32]탕약[-][/b]을 만들어보자." x="0" y="0" />
+      <contextWait type="item" condition="not" value="51006" ms="100" switch="hotWater" />
+      <condition switch="hotWater">
+        <dialogue name="나쟈" text="그런데 너 가방에 있던 뜨거운물은 어디 간거야?" x="0" y="-200" />
+        <ingameContextControl type="takeItem" itemCode="51006" quantity="1" />
+        <dialogue name="나쟈" text="으이구.. 여기 뜨거운물의 여유분이야.." x="0" y="-200" />
+      </condition>
+
+      <explain type="pivot" pivot="Center" />
+      <explain type="ui" state="Basic" />
+      <explain type="setText" text="오른쪽 가방에서 [32CD32]탕약[-]을 제작하자." target="topCenter" />
+      <explain type="show" />
+
+      <loop switch="makeFood">
+        <contextWait type="itemPopupState" condition="equal" />
+        <condition switch="makeFood">
+          <ingameUIControl target="itemInfoBtn3" enable="false" />
+        </condition>
+        <contextWait type="itemPopupState" condition="not" />
+      </loop>
+
+      <loop switch="makeFood">
+        <switch id="herb" value="false" />
+        <contextWait type="itemPopupState" condition="equal" />
+        <contextWait type="item" condition="equal" switch="herb" value="31011" ms="1" />
+        <condition switch="makeFood">
+          <condition switch="herb">
+            <ingameUIControl target="itemInfoBtn1" enable="false" />
+          </condition>
+        </condition>
+        <contextWait type="itemPopupState" condition="not" />
+      </loop>
+
+      <loop switch="makeFood">
+        <contextWait type="characterInfoState" condition="equal" />
+        <explain type="hide" />
+        <contextWait type="characterInfoState" condition="not" />
+        <switch id="herbPopup" value="false" />
+        <contextWait type="makeItemPopupState" condition="equal" switch="herbPopup" ms="10" />
+        <condition switch="herbPopup">
+          <contextWait type="makeItemPopupState" condition="not" />
+        </condition>
+        <condition switch="makeFood">
+          <explain type="show" />
+        </condition>
+      </loop>
+
+      <loop switch="makeFood">
+        <contextWait type="itemPopupState" condition="equal" />
+        <explain type="hide" />
+        <contextWait type="itemPopupState" condition="not" />
+        <switch id="herbPopup" value="false" />
+        <contextWait type="makeItemPopupState" condition="equal" switch="herbPopup" ms="10" />
+        <condition switch="herbPopup">
+          <contextWait type="makeItemPopupState" condition="not" />
+        </condition>
+        <condition switch="makeFood">
+          <explain type="show" />
+        </condition>
+      </loop>
+
+      <contextWait type="item" condition="equal" value="31032" />
+      <ingameContextControl type="takeItem" itemCode="51006" quantity="1" />
+      <!--<explain type="setText" />-->
+      <dialogue name="나쟈" text="아까 물수리랑 싸우면서 조금 다친 모양인데?" target="topCenter" />
+      <dialogue name="나쟈" text="[32CD32]탕약[-]을 먹으면 체력이 회복될 거야." target="topCenter" />
+
+      <explain type="pivot" pivot="Center" />
+      <explain type="setText" text="오른쪽 가방에서 [32CD32]탕약[-]을 사용하자." target="topCenter" />
+      <explain type="show" />
+
+      <contextWait type="healthMax" condition="equal" value="true" />
+      <ingameUIControl target="bloodEffect" health="normal"/>
+      <switch id="makeFood" value="false" />
+      <explain type="hide" />
+      <switch id="fightEnd" value="true" />
+    </parallel>
+
+    <contextWait type="gameStatus" condition="equal" value="battle" />
+    <dialogue name="나쟈" text="물수리가 나타났어!" x="0" y="-200" />
+    <contextWait type="equip" condition="equal" value="11007" switch="fight1" ms="100" />
+    <switch id="condi1" value="true" />
+
+    <condition switch="fight1">
+      <dialogue name="나쟈" text="[00B700]아이언너클[-]로 충분히 해볼 만한 상대야!@@공격하자." />
+      <switch id="condi1" value="false" />
+    </condition>
+
+    <condition switch="condi1">
+      <dialogue name="나쟈" text="근데 너 왜 맨손이야?!_@@[00B700]아이언너클[-]은 대체 어디다 팔아먹은 거야?" x="0" y="-200" />
+      <dialogue name="나쟈" text="뭘 멍하니 있어! 그래도 싸우든 도망치든 뭐라도 해봐야지!" x="0" y="-200" />
+    </condition>
+
+        <explain type="pivot" pivot="Right" />
+        <explain type="ui" state="None" />
+        <explain type="setText" text="상대방을 공격할 수 있습니다." target="battleAttack" />
+        <explain type="show" />
+
+    <ingameUIControl target="fieldBtn1" enable="false" />
+
+    <contextWait type="gameStatus" condition="not" value="battle" />
+    <explain type="hide" />
+    <contextWait type="switch" condition="equal" id="fightEnd" value="true" />
+	
+	<!-- 재키 등장 -->
+    <dialogue name="나쟈" text="좋아, 체력이 돌아온 것 같네. 이 주변을 좀 더 둘러보자." x="0" y="0" skip="false" />
+
+    <explain type="pivot" pivot="Center" />
+    <explain type="setText" text="화면 중앙을 눌러 다시 탐색해보자." target="topCenter" />
+    <explain type="ui" state="Basic" />
+    <explain type="show" />
+	<wait ms="300" />
+  <!--숫자 숙련도 제거 (masteryRank="70" ==> masteryRank="F"), SearchResult.cs 수정하였음-->
+    <parallel>
+      <searchResult type="enemy" target="재키" skinType="104" nickname="Character/Name/001" live2d="true" level="1" myDmg="30" kill="true" enemyHealth="10" enemyMaxHealth="120" watchWord="Character/Title/001" weaponType="blade" masteryRank="F" 
+	  weapon="13000" chest_protector="22039" head_protector="21020"/>
+      <ingameUIControl target="bloodEffect" health="normal"/>
+      <clickBlock enable="true" />
+      <keyControl key="back" enable="false" />
+      <wait ms="2000" />
+	  
+	<contextWait type="enemyKill" condition="equal" />
+	<explain type="hide" />
+	<dialogue name="나쟈" text="실험체와 해본 첫 전투는 어때?"/>
+	<dialogue name="나쟈" text="무서웠겠지만 네가 당하지 않으려면 익숙해져야 해. 아이템 획득은 덤이고!"/>
+	
+    <clickBlock enable="false" />
+    <contextWait type="enemyKill" condition="not" />
+    <cursor type="hide" />
+    <keyControl key="back" enable="true" />
+    <switch id="fightEnd2" value="true" />
+    </parallel>
+
+	<contextWait type="gameStatus" condition="equal" value="battle" />
+    <clickBlock enable="true" />
+    <dialogue name="나쟈" text="요주의 실험체인 학살자 재키야!" x="0" y="-200" />
+	<dialogue name="나쟈" text="당하기 전에 서둘러! 네가 먼저 공격해야 해!" x="0" y="-200" />
+	
+	<explain type="pivot" pivot="Right" />
+      <explain type="ui" state="None" />
+      <explain type="setText" text="상대방을 공격할 수 있습니다." target="battleAttack" />
+	  <clickBlock enable="false" />
+    <explain type="show" />
+
+    <ingameUIControl target="fieldBtn1" enable="false" />
+
+    <contextWait type="switch" condition="equal" id="fightEnd2" value="true" />
+	<!-- -->
+
+    <ingameUIControl target="fieldBtn1" enable="true" />
+    <ingameContextControl type="fieldWill" num="cur" />
+
+    <fieldTimer timer="60" type="stop"/>
+
+    <introduce type="location" target="location" />
+
+    <dialogue name="나쟈" text="이런, 시간이 벌써!" x="0" y="0" skip="false" /> <!--말 줄임표 삭제-->
+    <dialogue name="나쟈" text="현재 위치가 다음 금지구역 예정지가 되었어!" x="0" y="0" skip="false" />
+    <dialogue name="나쟈" text="서둘러 이곳을 빠져나가야 해!" x="0" y="0" />
+    <dialogue name="나쟈" text="오른쪽 아래 있는 이동 버튼으로 이 지역을 탈출 할 수 있어." /><!--추가-->
+    <explain type="pivot" pivot="Top" />
+    <explain type="setText" text="타이머가 끝나기 전에 이동해야 합니다." target="timer" />
+    <explain type="show" />
+    <fieldTimer timer="60" />
+    <loop switch="nadjaAssert">
+      <wait ms="12000" />
+      <condition switch="nadjaAssert">
+        <dialogue name="나쟈" text="오른쪽 아래 있는 이동 버튼으로 이 지역을 탈출 할 수 있어." />
+      </condition>
+    </loop>
+    <parallel>
+      <switch id="escape" value="true" />
+      <wait ms="54000" />
+      <switch id="nadjaAssert" value="false" />
+      <condition switch="escape">
+        <fieldTimer timer="6" type="stop" />
+        <ingameUIControl target="closePopup" />
+        <dialogue name="나쟈" text="시간이 5초 밖에 남지 않았는데 도망가지 않고 뭐하는 거야?" x="0" y="-200" />
+        <dialogue name="나쟈" text="타이머가 0이 되면 폭발해 버린다고!" x="0" y="-200" />
+        <clickBlock enable="true" />
+        <keyControl key="back" enable="false" />
+        <fieldTimer timer="5" type="stop"/>
+        <cursor type="move" x="640" y="360" ms="100" />
+        <cursor type="show" />
+        <wait ms="300" />
+        <cursor type="move" target="fieldBtn1" ms="300" />
+        <cursor type="caption" text="지역 이동"/>
+        <cursor type="effect" />
+        <cursor type="click" />
+        <clickBlock enable="false" />
+        <cursor type="hide" />
+        <switch id="notPond" value="true" />
+        <wait ms="500" />
+        <keyControl key="back" enable="true" />
+      </condition>
+    </parallel>
+    <contextWait type="miniMapState" condition="equal" />
+    <explain type="hide" />
+    <contextWait type="isSafeField" condition="equal" value="true" />
+    <clickBlock enable="true" />
+    <switch id="escape" value="false" />
+    <switch id="nadjaAssert" value="false" />
+    <wait ms="1500" />
+    <clickBlock enable="false" />
+    <dialogue name="나쟈" text="금지구역에 계속 있다가는 죽게 될 거야.@@시간이 되기 전에 도망쳐야 해." x="0" y="0" /> <!-- 문장 변경-->
+    <dialogue name="나쟈" text="금지구역이 지정되기 전엔 미리 경보음이 울리니@@항상 신경 쓰도록 해." x="0" y="0" /> <!-- 문장 변경-->
+
+    <dialogue name="나쟈" text="좋아. 이 정도면 실전에 나서도 되겠어!" x="0" y="0" />
+    <gameResult result="win" />
+  </contents>
+</bs-scenario>

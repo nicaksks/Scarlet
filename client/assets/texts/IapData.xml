@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<IapData>
+    <!-- Nimbleneuron -->
+    <IapType Id="GMIP001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Gem 250" Desc="Gem 250" AppleId="com.archbears.bs.gem.250" GoogleId="com.archbears.bs.gem.250" GooglePrice="3000" ApplePriceTier="3"/>
+    <IapType Id="GMIP002" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Gem 500" Desc="Gem 500" AppleId="com.archbears.bs.gem.500" GoogleId="com.archbears.bs.gem.500" GooglePrice="5000" ApplePriceTier="5"/>
+    <IapType Id="GMIP003" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Gem 1200" Desc="Gem 1200" AppleId="com.archbears.bs.gem.1200" GoogleId="com.archbears.bs.gem.1200" GooglePrice="10000" ApplePriceTier="10"/>
+    <IapType Id="GMIP004" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Gem 2500" Desc="Gem 2500" AppleId="com.archbears.bs.gem.2500" GoogleId="com.archbears.bs.gem.2500" GooglePrice="20000" ApplePriceTier="20"/>
+    <IapType Id="GMIP005" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Gem 6500" Desc="Gem 6500" AppleId="com.archbears.bs.gem.6500" GoogleId="com.archbears.bs.gem.6500" GooglePrice="50000" ApplePriceTier="50"/>
+    <IapType Id="GMIP006" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Gem 14000" Desc="Gem 14000" AppleId="com.archbears.bs.gem.14000" GoogleId="com.archbears.bs.gem.14000" GooglePrice="100000" ApplePriceTier="60"/>
+    <IapType Id="GMIP007" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Gem 80" Desc="Gem 80" AppleId="com.archbears.bs.gem.80" GoogleId="com.archbears.bs.gem.80" GooglePrice="1100" ApplePriceTier="1"/>
+    
+    <IapType Id="RVIP001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Revive 1000" Desc="Revive 1000" AppleId="com.archbears.bs.revive.1000" GoogleId="com.archbears.bs.revive.1000" GooglePrice="1000" ApplePriceTier="1"/>
+    
+    <IapType Id="PKIP001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Starter.Pack.5000" Desc="Starter.Pack.5000" AppleId="com.archbears.bs.starter.pack.5000" GoogleId="com.archbears.bs.starter.pack.5000" GooglePrice="5000" ApplePriceTier="5"/>
+    <IapType Id="PKIP002" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Starter.Pack.10000" Desc="Starter.Pack.10000" AppleId="com.archbears.bs.starter.pack.10000" GoogleId="com.archbears.bs.starter.pack.10000" GooglePrice="10000" ApplePriceTier="10"/>
+    <IapType Id="PKIP003" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Character.PHack2.10000" Desc="Character.Pack2.10000" AppleId="com.archbears.bs.character.pack2.10000" GoogleId="com.archbears.bs.character.pack2.10000" GooglePrice="10000" ApplePriceTier="10"/>
+
+    <IapType Id="PKDL001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Daily1.Pack.3000" Desc="Daily1.Pack.3000" AppleId="com.archbears.bs.daily1.pack.3000" GoogleId="com.archbears.bs.daily1.pack.3000" GooglePrice="3000" ApplePriceTier="3"/>
+    <IapType Id="PKDL002" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Daily2.Pack.10000" Desc="Daily2.Pack.10000" AppleId="com.archbears.bs.daily2.pack.10000" GoogleId="com.archbears.bs.daily2.pack.10000" GooglePrice="10000" ApplePriceTier="10"/>
+    <IapType Id="PKDL003" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Daily3.Pack.20000" Desc="Daily3.Pack.20000" AppleId="com.archbears.bs.daily3.pack.20000" GoogleId="com.archbears.bs.daily3.pack.20000" GooglePrice="20000" ApplePriceTier="20"/>
+
+    <IapType Id="PKFI001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="firstiap.yuki.pack.7500" Desc="firstiap.yuki.pack.7500" AppleId="com.archbears.bs.firstiap.yuki.pack.7500" GoogleId="com.archbears.bs.firstiap.yuki.pack.7500" GooglePrice="7500" ApplePriceTier="6" />
+    <IapType Id="PKFI002" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="firstiap.sua.pack.7500" Desc="firstiap.sua.pack.7500" AppleId="com.archbears.bs.firstiap.sua.pack.7500" GoogleId="com.archbears.bs.firstiap.sua.pack.7500" GooglePrice="7500" ApplePriceTier="6" />
+    <IapType Id="PKFI003" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="firstiap.mai.pack.7500" Desc="firstiap.mai.pack.7500" AppleId="com.archbears.bs.firstiap.mai.pack.7500" GoogleId="com.archbears.bs.firstiap.mai.pack.7500" GooglePrice="7500" ApplePriceTier="6" />
+
+    <IapType Id="PLUFX001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Fox.Pack.10000" Desc="Fox.Pack.10000" AppleId="com.archbears.bs.fox.pack.10000" GoogleId="com.archbears.bs.fox.pack.10000" GooglePrice="10000" ApplePriceTier="10"/>
+    <IapType Id="PLUW001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Wolf.Pack.10000" Desc="Wolf.Pack.10000" AppleId="com.archbears.bs.wolf.pack.10000" GoogleId="com.archbears.bs.wolf.pack.10000" GooglePrice="10000" ApplePriceTier="10"/>
+    <IapType Id="PLUL001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Lion.Pack.20000" Desc="Lion.Pack.20000" AppleId="com.archbears.bs.lion.pack.20000" GoogleId="com.archbears.bs.lion.pack.20000" GooglePrice="20000" ApplePriceTier="20"/>
+    <IapType Id="PLUB001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Bear.Pack.30000" Desc="Bear.Pack.30000" AppleId="com.archbears.bs.bear.pack.30000" GoogleId="com.archbears.bs.bear.pack.30000" GooglePrice="30000" ApplePriceTier="30"/>
+    <IapType Id="PLUD001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Dragon.Pack.100000" Desc="Dragon.Pack.100000" AppleId="com.archbears.bs.dragon.pack.100000" GoogleId="com.archbears.bs.dragon.pack.100000" GooglePrice="100000" ApplePriceTier="60"/>
+
+    <IapType Id="PLUHR001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Horse.Pack.3000" Desc="Horse.Pack.3000" AppleId="com.archbears.bs.horse.pack.3000" GoogleId="com.archbears.bs.horse.pack.3000" GooglePrice="3000" ApplePriceTier="3"/>
+    <IapType Id="PLUBF001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Buffalo.Pack.3000" Desc="Buffalo.Pack.3000" AppleId="com.archbears.bs.buffalo.pack.5000" GoogleId="com.archbears.bs.buffalo.pack.5000" GooglePrice="5000" ApplePriceTier="5"/>
+    <IapType Id="PLUEP001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Elephant.Pack.5000" Desc="Elephant.Pack.5000" AppleId="com.archbears.bs.elephant.pack.5000" GoogleId="com.archbears.bs.elephant.pack.5000" GooglePrice="5000" ApplePriceTier="5"/>
+
+    <IapType Id="AR001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Reserch.Support.5000" Desc="Reserch.Support.5000" AppleId="com.archbears.bs.reserch.support.5000" GoogleId="com.archbears.bs.reserch.support.5000" GooglePrice="5000" ApplePriceTier="5"/>
+    <IapType Id="AR002" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Reserch.Support.10000" Desc="Reserch.Support.10000" AppleId="com.archbears.bs.advanced.reserch.support.10000" GoogleId="com.archbears.bs.advanced.reserch.support.10000" GooglePrice="10000" ApplePriceTier="10"/>
+    
+    <IapType Id="EMIP001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Experiment.memory.500" Desc="Experiment.memory.500" AppleId="com.archbears.bs.experiment.memory.500" GoogleId="com.archbears.bs.experiment.memory.500" GooglePrice="12000" ApplePriceTier="11"/>
+    <IapType Id="EMIP002" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Experiment.memory.2000" Desc="Experiment.memory.2000" AppleId="com.archbears.bs.experiment.memory.2000" GoogleId="com.archbears.bs.experiment.memory.2000" GooglePrice="45000" ApplePriceTier="40"/>
+    <IapType Id="EMIP003" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Experiment.memory.5000" Desc="Experiment.memory.5000" AppleId="com.archbears.bs.experiment.memory.5000" GoogleId="com.archbears.bs.experiment.memory.5000" GooglePrice="100000" ApplePriceTier="59"/>
+    
+    <IapType Id="TTS001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Support.tournament.ticket.10000" Desc="Support.tournament.ticket.10000" AppleId="com.archbears.bs.support.tournament.ticket.10000" GoogleId="com.archbears.bs.support.tournament.ticket.10000" GooglePrice="10000" ApplePriceTier="10"/>
+    
+    <IapType Id="LBM001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Labyrinth.membership.10000" Desc="Labyrinth.membership.10000" AppleId="com.archbears.bs.labyrinth.membership.10000" GoogleId="com.archbears.bs.labyrinth.membership.10000" GooglePrice="10000" ApplePriceTier="9" />
+    <IapType Id="LBB001" Platform="Nimbleneuron" Type="Consumable" Local="ko_KR" Title="Labyrinth.booster.10000" Desc="Labyrinth.booster.10000" AppleId="com.archbears.bs.labyrinth.booster.5000" GoogleId="com.archbears.bs.labyrinth.booster.5000" GooglePrice="5000" ApplePriceTier="4" />
+        
+    <!-- Netease -->
+    <IapType Id="GMIP001" Platform="Netease" Type="Consumable" Local="en_US" Title="Fistful of Gems - 250" Desc="250 Gems" AppleId="boltrend.bs.global.ios.gem250" GoogleId="boltrend.bs.global.android.gem250" GooglePrice="2.49" ApplePriceTier="3"/>
+    <IapType Id="GMIP002" Platform="Netease" Type="Consumable" Local="en_US" Title="Purse of Gems - 500" Desc="500 Gems" AppleId="boltrend.bs.global.ios.gem500" GoogleId="boltrend.bs.global.android.gem500" GooglePrice="4.49" ApplePriceTier="5"/>
+    <IapType Id="GMIP003" Platform="Netease" Type="Consumable" Local="en_US" Title="Pouch of Gems - 1200" Desc="1200 Gems" AppleId="boltrend.bs.global.ios.gem1200" GoogleId="boltrend.bs.global.android.gem1200" GooglePrice="8.99" ApplePriceTier="10"/>
+    <IapType Id="GMIP004" Platform="Netease" Type="Consumable" Local="en_US" Title="Chestful of Gems - 2500" Desc="2500 Gems" AppleId="boltrend.bs.global.ios.gem2500" GoogleId="boltrend.bs.global.android.gem2500" GooglePrice="17.99" ApplePriceTier="20"/>
+    <IapType Id="GMIP005" Platform="Netease" Type="Consumable" Local="en_US" Title="Wagon of Gems - 6500" Desc="6500 Gems" AppleId="boltrend.bs.global.ios.gem6500" GoogleId="boltrend.bs.global.android.gem6500" GooglePrice="44.99" ApplePriceTier="50"/>
+    <IapType Id="GMIP006" Platform="Netease" Type="Consumable" Local="en_US" Title="Mountain of Gems - 14000" Desc="14000 Gems" AppleId="boltrend.bs.global.ios.gem14000" GoogleId="boltrend.bs.global.android.gem14000" GooglePrice="89.99" ApplePriceTier="60"/>
+    <IapType Id="GMIP007" Platform="Netease" Type="Consumable" Local="en_US" Title="Pinch of Gems - 80" Desc="80 Gems" AppleId="boltrend.bs.global.ios.gem80" GoogleId="boltrend.bs.global.android.gem80" GooglePrice="0.99" ApplePriceTier="1"/>
+    
+    <IapType Id="RVIP001" Platform="Netease" Type="NonConsumable" Local="en_US" Title="Assistant Reseracher" Desc="Assistant Reseracher" AppleId="boltrend.bs.global.ios.revive.1000" GoogleId="boltrend.bs.global.android.revive.1000" GooglePrice="0.99" ApplePriceTier="1"/>
+    
+    <IapType Id="PKIP001" Platform="Netease" Type="NonConsumable" Local="en_US" Title="Starter Pack" Desc="Starter.Pack.5000" AppleId="boltrend.bs.global.ios.starter.pack.5000" GoogleId="boltrend.bs.global.android.starter.pack.5000" GooglePrice="4.49" ApplePriceTier="5"/>
+    <IapType Id="PKIP003" Platform="Netease" Type="NonConsumable" Local="en_US" Title="New character pack" Desc="New character pack" AppleId="boltrend.bs.global.ios.character.pack2.10000" GoogleId="boltrend.bs.global.android.character.pack2.10000" GooglePrice="9.99" ApplePriceTier="10"/>
+    
+    <IapType Id="PKDL001" Platform="Netease" Type="NonConsumable" Local="en_US" Title="Daily1.Pack.3000" Desc="Daily1.Pack.3000" AppleId="boltrend.bs.global.ios.daily1.pack.3000" GoogleId="boltrend.bs.global.android.daily1.pack.3000" GooglePrice="2.49" ApplePriceTier="3"/>
+    <IapType Id="PKDL002" Platform="Netease" Type="NonConsumable" Local="en_US" Title="Daily2.Pack.10000" Desc="Daily2.Pack.10000" AppleId="boltrend.bs.global.ios.daily2.pack.10000" GoogleId="boltrend.bs.global.android.daily2.pack.10000" GooglePrice="8.99" ApplePriceTier="10"/>
+    <IapType Id="PKDL003" Platform="Netease" Type="NonConsumable" Local="en_US" Title="Daily3.Pack.20000" Desc="Daily3.Pack.20000" AppleId="boltrend.bs.global.ios.daily3.pack.20000" GoogleId="boltrend.bs.global.android.daily3.pack.20000" GooglePrice="17.99" ApplePriceTier="20"/>
+
+    <IapType Id="PKFI001" Platform="Netease" Type="Consumable" Local="en_US" Title="firstiap.yuki.pack.7500" Desc="firstiap.yuki.pack.7500" AppleId="boltrend.bs.global.ios.firstiap.yuki.pack.7500" GoogleId="boltrend.bs.global.android.firstiap.yuki.pack.7500" GooglePrice="5.99" ApplePriceTier="6" />
+    <IapType Id="PKFI002" Platform="Netease" Type="Consumable" Local="en_US" Title="firstiap.sua.pack.7500" Desc="firstiap.sua.pack.7500" AppleId="boltrend.bs.global.ios.firstiap.sua.pack.7500" GoogleId="boltrend.bs.global.android.firstiap.sua.pack.7500" GooglePrice="5.99" ApplePriceTier="6" />
+    <IapType Id="PKFI003" Platform="Netease" Type="Consumable" Local="en_US" Title="firstiap.mai.pack.7500" Desc="firstiap.mai.pack.7500" AppleId="boltrend.bs.global.ios.firstiap.mai.pack.7500" GoogleId="boltrend.bs.global.android.firstiap.mai.pack.7500" GooglePrice="5.99" ApplePriceTier="6" />
+
+    <IapType Id="PLUFX001" Platform="Netease" Type="Consumable" Local="en_US" Title="Fox Promotion Package" Desc="Fox Promotion Package" AppleId="boltrend.bs.global.ios.fox.pack.10000" GoogleId="boltrend.bs.global.android.fox.pack.10000" GooglePrice="8.99" ApplePriceTier="10"/>
+    <IapType Id="PLUW001" Platform="Netease" Type="Consumable" Local="en_US" Title="Wolf Promotion Package" Desc="Wolf Promotion Package" AppleId="boltrend.bs.global.ios.wolf.pack.10000" GoogleId="boltrend.bs.global.android.wolf.pack.10000" GooglePrice="8.99" ApplePriceTier="10"/>
+    <IapType Id="PLUL001" Platform="Netease" Type="Consumable" Local="en_US" Title="Lion Promotion Package" Desc="Lion Promotion Package" AppleId="boltrend.bs.global.ios.lion.pack.20000" GoogleId="boltrend.bs.global.android.lion.pack.20000" GooglePrice="17.99" ApplePriceTier="20"/>
+    <IapType Id="PLUB001" Platform="Netease" Type="Consumable" Local="en_US" Title="Bear Promotion Package" Desc="Bear Promotion Package" AppleId="boltrend.bs.global.ios.bear.pack.30000" GoogleId="boltrend.bs.global.android.bear.pack.30000" GooglePrice="26.99" ApplePriceTier="29"/>
+    <IapType Id="PLUD001" Platform="Netease" Type="Consumable" Local="en_US" Title="Dragon Promotion Package" Desc="Dragon Promotion Package" AppleId="boltrend.bs.global.ios.dragon.pack.100000" GoogleId="boltrend.bs.global.android.dragon.pack.100000" GooglePrice="89.99" ApplePriceTier="60"/>
+   
+    <IapType Id="PLUHR001" Platform="Netease" Type="Consumable" Local="en_US" Title="Horse Promotion Package" Desc="Horse Promotion Package" AppleId="boltrend.bs.global.ios.horse.pack.3000" GoogleId="boltrend.bs.global.android.horse.pack.3000" GooglePrice="2.49" ApplePriceTier="3"/>
+    <IapType Id="PLUBF001" Platform="Netease" Type="Consumable" Local="en_US" Title="Buffalo Promotion Package" Desc="Buffalo Promotion Package" AppleId="boltrend.bs.global.ios.buffalo.pack.5000" GoogleId="boltrend.bs.global.android.buffalo.pack.5000" GooglePrice="4.49" ApplePriceTier="5"/>
+    <IapType Id="PLUEP001" Platform="Netease" Type="Consumable" Local="en_US" Title="Elephant Promotion Package" Desc="Elephant Promotion Package" AppleId="boltrend.bs.global.ios.elephant.pack.5000" GoogleId="boltrend.bs.global.android.elephant.pack.5000" GooglePrice="4.49" ApplePriceTier="5"/>
+   
+    <IapType Id="AR001" Platform="Netease" Type="NonConsumable" Local="en_US" Title="Research Support" Desc="Research Support" AppleId="boltrend.bs.global.ios.reserch.support.5000" GoogleId="boltrend.bs.global.android.reserch.support.5000" GooglePrice="4.49" ApplePriceTier="5"/>
+    <IapType Id="AR002" Platform="Netease" Type="NonConsumable" Local="en_US" Title="Advanced Research Support" Desc="Advanced Research Support" AppleId="boltrend.bs.global.ios.advanced.reserch.support.10000" GoogleId="boltrend.bs.global.android.advanced.reserch.support.10000" GooglePrice="8.99" ApplePriceTier="9"/>
+   
+    <IapType Id="EMIP001" Platform="Netease" Type="Consumable" Local="en_US" Title="Experiment Memory(500 items)" Desc="Experiment Memory(500 items)" AppleId="boltrend.bs.global.ios.experiment.memory.500" GoogleId="boltrend.bs.global.android.experiment.memory.500" GooglePrice="10.79" ApplePriceTier="11"/>
+    <IapType Id="EMIP002" Platform="Netease" Type="Consumable" Local="en_US" Title="Experiment Memory(2000 items)" Desc="Experiment Memory(2000 items)" AppleId="boltrend.bs.global.ios.experiment.memory.2000" GoogleId="boltrend.bs.global.android.experiment.memory.2000" GooglePrice="40.46" ApplePriceTier="40"/>
+    <IapType Id="EMIP003" Platform="Netease" Type="Consumable" Local="en_US" Title="Experiment Memory(5000 items)" Desc="Experiment Memory(5000 items)" AppleId="boltrend.bs.global.ios.experiment.memory.5000" GoogleId="boltrend.bs.global.android.experiment.memory.5000" GooglePrice="89.90" ApplePriceTier="59"/>
+    
+    <IapType Id="TTS001" Platform="Netease" Type="Consumable" Local="en_US" Title="Tournament membership" Desc="Tournament membership" AppleId="boltrend.bs.global.ios.support.tournament.ticket.10000" GoogleId="boltrend.bs.global.android.support.tournament.ticket.10000" GooglePrice="10.79" ApplePriceTier="11"/>
+
+    <IapType Id="LBM001" Platform="Netease" Type="Consumable" Local="en_US" Title="Labyrinth.membership.10000" Desc="Labyrinth.membership.10000" AppleId="boltrend.bs.global.ios.labyrinth.membership.10000" GoogleId="boltrend.bs.global.android.labyrinth.membership.10000" GooglePrice="8.99" ApplePriceTier="9" />
+    <IapType Id="LBB001" Platform="Netease" Type="Consumable" Local="en_US" Title="Labyrinth.booster.10000" Desc="Labyrinth.booster.10000" AppleId="boltrend.bs.global.ios.labyrinth.booster.5000" GoogleId="boltrend.bs.global.android.labyrinth.booster.5000" GooglePrice="4.49" ApplePriceTier="4" />
+</IapData>

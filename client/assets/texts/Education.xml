@@ -1,0 +1,76 @@
+<bs-scenario>
+  <scene id="20001" name="전투 훈련"/>
+  <summary goal="3명의 AI를 상대로 승리" desc="위치 발신기를 장착한 3명의 AI를 상대로 살아 남으세요.@@기본적인 전투 기술을 연마할 수 있어요."/>
+  <contents>
+    <parallel>
+      <methodLoader namespace="Tutorial" />
+      <wait ms="1000"/>
+      <introControl type="waitNormalGame" />
+      <clickBlock enable="true" />
+      <dialogue name="나쟈" text="첫 번째 실전이니깐, 가볍게 4명 정도로 시작해볼까?" face="Resource_NadjaFace" x="0" y="0" skip="false" />
+      <dialogue name="나쟈" text="규칙은 항상 같아. 살아 남는 건 단 한 명 뿐." face="Resource_NadjaFace" x="0" y="0" skip="false" />
+      <dialogue name="나쟈" text="무기는 모두 7가지 계열이 있지만,@@나한테 익숙한 무기가 최고야." face="Resource_NadjaFace" x="0" y="0" skip="false" />
+      <dialogue name="나쟈" text="초상화 아래에 장착중인 무기 계열과 숙련도가 있어."/>
+      <dialogue name="나쟈" text="숙련도 랭크가 올라갈 수록 훨씬 강해진다는 걸 잊지마.@@랭크업에 필요한 경험치는 적을 공격할 때마다 얻을 수 있어"/>
+      <dialogue name="나쟈" text="나한테 익숙하지 않은 무기를 착용하면 숙련도가 낮아지니@@가급적 현재 착용 중인 무기 계열을 유지하는 것이 좋아"/>
+      <clickBlock enable="false" />
+      <wait ms="300"/>
+      <introduce type="mastery" target="mastery" />
+      <introduce type="naviBtn" target="navi" />
+      <switch id="assert" value="true" />
+      <parallel>
+        <contextWait type="miniMapState" condition="equal" />
+        <switch id="assert" value="false" />
+      </parallel>
+      <wait ms="40000"/>
+      <condition switch="assert">
+        <dialogue name="나쟈" text="신중하게 행동하는 것도 좋지만 계속 여기에 머무르다간@@금지구역 때문에 죽어버릴거야."/>
+        <introduce type="location" target="location" />
+      </condition>
+    </parallel>
+    <loop switch="hp">
+      <advice text="주의! 체력이 부족해요." target="hp" ms="600000" pivot="BottomLeft" trigger="LowHP" offset="40"/>
+    </loop>
+    <loop switch="sta">
+      <advice text="주의! 스태미너가 부족해요." target="sta" ms="600000" pivot="BottomLeft" trigger="LowStamina" offset="15"/>
+    </loop>
+    <loop switch="weapon">
+      <advice text="무기가 부서질 것 같아요!" target="weapon" ms="600000" pivot="BottomLeft" trigger="BrokenWeapon"/>
+    </loop>
+    <loop switch="warningField">
+      <advice text="타이머가 끝나기 전에 이동해야 해요." target="warningField" ms="600000" pivot="TopRight" trigger="WarningField"/>
+    </loop>
+    <loop switch="wound">
+      <advice text="부상을 당했어요. 치료가 필요해요." target="wound" ms="600000" pivot="BottomRight" trigger="Wound"/>
+    </loop>
+    <loop switch="fullInven">
+      <advice text="가방에 공간이 부족해요." target="fullInven" ms="600000" pivot="Right" trigger="FullInven"/>
+    </loop>
+    <loop switch="abandon">
+      <advice text="버린 아이템은 여기서 다시 주워요." target="abandon" ms="600000" pivot="TopRight" trigger="AbandonItem" offset="-30"/>
+    </loop>
+    <loop switch="WarningWeaponMastery">
+      <advice text="숙련도가 낮아졌어요. 무기를 교체해주세요" target="WarningWeaponMastery" ms="600000" pivot="BottomLeft" trigger="WarningWeaponMastery" offset="0"/>
+    </loop>
+    <loop switch="revive">
+      <contextWait type="curField" condition="not" value="23" />
+      <contextWait type="curField" condition="equal" value="23" />
+      <wait ms="1000" />
+      <dialogue name="나쟈" text="지금은 훈련이니까 살려줄게. 다음에는 조심해." face="Resource_NadjaFace" x="0" y="0" skip="false"/>
+    </loop>
+    
+    <!-- 3.0.02 핫픽스 제외
+    <loop switch="hpAssert">
+      <contextWait type="healthLow" condition="equal" />
+      <tutoAssertEffect type="health" enable="true" />
+      <contextWait type="healthLow" condition="not" />
+    </loop>
+
+    <loop switch="staAssert">
+      <contextWait type="staminaLow" condition="equal" />
+      <tutoAssertEffect type="health" enable="true" />
+      <contextWait type="staminaLow" condition="not" />
+    </loop>
+    -->
+  </contents>
+</bs-scenario>

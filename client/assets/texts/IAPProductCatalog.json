@@ -1,0 +1,824 @@
+{
+    "appleSKU": "bs1",
+    "appleTeamID": "",
+    "enableCodelessAutoInitialization": true,
+    "products": [
+        {
+            "id": "GMIP001",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.gem.250"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.gem.250"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Gem 250",
+                "description": "Gem 250"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 3,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    3000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 3000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "GMIP002",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.gem.500"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.gem.500"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Gem 500",
+                "description": "Gem 500"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 5,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    5000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 5000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "GMIP003",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.gem.1200"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.gem.1200"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Gem 1200",
+                "description": "Gem 1200"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 10,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    10000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 10000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "GMIP004",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.gem.2500"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.gem.2500"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Gem 2500",
+                "description": "Gem 2500"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 20,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    20000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 20000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "GMIP005",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.gem.6500"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.gem.6500"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Gem 6500",
+                "description": "Gem 6500"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 50,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    50000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 50000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "GMIP006",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.gem.14000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.gem.14000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Gem 14000",
+                "description": "Gem 14000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 60,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    100000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 100000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "RVIP001",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.revive.1000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.revive.1000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Revive 1000",
+                "description": "Revive 1000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 1,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    1000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 1000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "PKIP001",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.starter.pack.5000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.starter.pack.5000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Starter.Pack.5000",
+                "description": "Starter.Pack.5000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 5,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    5000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 5000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "PKIP002",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.character.pack.10000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.character.pack.10000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Character.Pack.10000",
+                "description": "Character.Pack.10000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 10,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    10000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 10000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "AR001",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.reserch.support.5000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.reserch.support.5000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Reserch.Support.5000",
+                "description": "Reserch.Support.5000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 5,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    5000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 5000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "PLUW001",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.wolf.pack.10000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.wolf.pack.10000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Wolf.Pack.10000",
+                "description": "Wolf.Pack.10000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 10,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    10000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 10000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "PLUL001",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.lion.pack.20000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.lion.pack.20000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Lion.Pack.20000",
+                "description": "Lion.Pack.20000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 20,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    20000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 20000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "PLUB001",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.bear.pack.30000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.bear.pack.30000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Bear.Pack.30000",
+                "description": "Bear.Pack.30000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 30,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    30000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 30000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "AR002",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.advanced.reserch.support.10000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.advanced.reserch.support.10000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Reserch.Support.10000",
+                "description": "Reserch.Support.10000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 10,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    10000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 10000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "EMIP001",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.experiment.memory.500"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.experiment.memory.500"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Experiment.memory.500",
+                "description": "Experiment.memory.500"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 11,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    12000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 12000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "EMIP002",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.experiment.memory.2000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.experiment.memory.2000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Experiment.memory.2000",
+                "description": "Experiment.memory.2000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 40,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    45000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 45000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "EMIP003",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.experiment.memory.5000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.experiment.memory.5000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Experiment.memory.5000",
+                "description": "Experiment.memory.5000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 59,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    100000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 100000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "PKIP003",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.character.pack2.10000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.character.pack2.10000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 12,
+                "title": "Character.Pack2.10000",
+                "description": "Character.Pack2.10000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 10,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    10000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 10000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        },
+        {
+            "id": "TTS001",
+            "type": 0,
+            "storeIDs": [
+                {
+                    "store": "AppleAppStore",
+                    "id": "com.archbears.bs.support.tournament.ticket.10000"
+                },
+                {
+                    "store": "GooglePlay",
+                    "id": "com.archbears.bs.support.tournament.ticket.10000"
+                }
+            ],
+            "defaultDescription": {
+                "googleLocale": 4,
+                "title": "Support.tournament.ticket.10000",
+                "description": "Support.tournament.ticket.10000"
+            },
+            "screenshotPath": "",
+            "applePriceTier": 10,
+            "xiaomiPriceTier": 0,
+            "googlePrice": {
+                "data": [
+                    10000,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 10000.0
+            },
+            "pricingTemplateID": "",
+            "descriptions": [],
+            "udpPrice": {
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "num": 0.0
+            },
+            "payouts": []
+        }
+    ]
+}
