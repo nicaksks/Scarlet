@@ -1,6 +1,6 @@
 <p align="center">
     <span style="font-size: 50px; font-weight: bold;"><sub>Scarlet</sub> <ins>MONOREPO</ins> 🌹</span><br>
-    <img src="./assets/icon.png" alt="log" style="width: 300px;">
+    <img src="./icon.png" alt="log" style="width: 300px;">
 </p>
 
 # ₍^. .^₎⟆About
