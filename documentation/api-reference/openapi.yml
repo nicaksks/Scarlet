@@ -1,0 +1,714 @@
+openapi: 3.1.0
+
+info:
+  title: Scarlet Documentation
+  version: 0.1.0
+
+servers:
+  - url: https://{sub}.{server}/v1
+    variables:
+      server:
+        default: scarlet-bs.fun
+      sub:
+        default: api
+        enum:
+          - api
+          - api.dev
+
+security:
+  - scarletAuth: []
+
+paths:
+  /user/{userNum}:
+    get:
+      tags:
+        - user
+        - profile
+      responses:
+        "200":
+          description: No description.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /user/{userNum}/games:
+    get:
+      tags:
+        - games
+      responses:
+        "200":
+          description: No description.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Games"
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  
+  /user/{userNum}/mostPlayedCharacter:
+    get:
+      tags:
+        - character
+      responses:
+        "200":
+          description: No description.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MostPlayedCharacter"
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /user/{userNum}/character/{characterCode}:
+    get:
+      tags:
+        - character
+      responses:
+        "200":
+          description: No description..
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Character"
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+components:
+  securitySchemes:
+    scarletAuth:
+      name: x-scarlet-session
+      type: apiKey
+      in: header
+      description: Use this header to ignore rate limit.
+
+  schemas:
+
+    Response: 
+      required:
+        - Cod
+        - Msg
+      type: object
+      properties:
+        Cod:
+          description: Status Code
+          example: 200
+          type: number
+          format: int32
+        Msg:
+          description: Message
+          example: SUCCESS
+          type: string
+        Cea:
+          description: Cache Expires At
+          example: 1747516935555
+          type: number
+          format: int64
+
+
+    User:
+      allOf:
+        - $ref: "#/components/schemas/Response"
+        - type: object
+      properties:
+        Rst:
+          type: object
+          properties:
+            User:
+              type: object
+              properties:
+               activatedPotentialSkillId:
+                 description: ActivatedPotentialSkillId
+                 example: 6005
+                 type: number
+                 format: int32
+               unm:
+                 description: UserNum
+                 example: 322880808140537860
+                 type: number
+                 format: int64
+               rpm:
+                 description: ReceiverPushMsg
+                 example: true
+                 type: boolean
+               npa:
+                 description: NewPostArrived
+                 example: true
+                 type: boolean
+               tag:
+                 description: TermsAgree
+                 example: true
+                 type: boolean
+               nnm:
+                 description: NickName
+                 example: "Tutsz"
+                 type: string
+               bgm:
+                 description: BackGroundMusic
+                 example: true
+                 type: boolean
+               sef:
+                 description: SoundEffect
+                 example: true
+                 type: boolean
+               lwd:
+                 description: LastWord
+                 example: "How can I die here..."
+                 type: string
+               wwd:
+                 description: WatchWord
+                 example: "Come at me"
+                 type: string
+               acn:
+                 description: ActiveCharacterNum
+                 example: 195231
+                 type: number
+                 format: int32
+               alc:
+                 description: AppLanguageCode
+                 example: "en"
+                 type: string
+               rvn:
+                 description: AdViewCount
+                 example: 10
+                 type: number
+                 format: int32
+               leg:
+                 description: League
+                 example: "DRAGON1"
+                 type: string
+               aps:
+                 description: Aps
+                 example: 6005
+                 type: number
+                 format: int32
+               mrn:
+                 description: MaxAdViewCount
+                 example: 10
+                 type: number
+                 format: int32
+               rtn:
+                 description: Rtn
+                 example: "NONE"
+                 type: string
+               bpt:
+                 description: BearPoint
+                 example: 843
+                 type: number
+                 format: int32
+               gld:
+                 description: Gold
+                 example: 782520
+                 type: number
+                 format: int32
+               gem:
+                 description: Gem
+                 example: 350
+                 type: number
+                 format: int32
+               cd:
+                 description: Credit
+                 example: 1020
+                 type: number
+                 format: int32
+               ma:
+                 description: Mileage
+                 example: 87
+                 type: number
+                 format: int32
+               em:
+                 description: ExperiementMemory
+                 example: 3
+                 type: number
+                 format: int32
+               tp:
+                 description: TournamentPoint
+                 example: 0
+                 type: number
+                 format: int32
+               tt:
+                 description: TournamentTicket
+                 example: 0
+                 type: number
+                 format: int32
+               vt:
+                 description: VoteTicket
+                 example: 0
+                 type: number
+                 format: int32
+               vs:
+                 description: VoteStamp
+                 example: 0
+                 type: number
+                 format: int32
+               lp:
+                 description: LabyrinthPoint
+                 example: 759520
+                 type: number
+                 format: int32
+               hc:
+                 description: EventCoin
+                 example: 0
+                 type: number
+                 format: int32
+
+    Games:
+      allOf:
+        - $ref: "#/components/schemas/Response"
+        - type: object
+      properties:
+        Rst:
+          type: object
+          properties:
+            newRequestArrived:
+              type: boolean
+              example: true
+            battleHistories:
+              type: array
+              items:
+                type: object
+                properties:
+                  knn:
+                    type: string
+                    description: KillerNickname
+                    example: "Darkisaur"
+                  rcn:
+                    type: number
+                    format: int64
+                    description: RetainedCharNum
+                    example: 195231
+                  skn:
+                    type: number
+                    format: int32
+                    description: CharacterSkinType
+                    example: 3206
+                  pkc:
+                    type: number
+                    format: int32
+                    description: PlayerKill
+                    example: 1
+                  pakc:
+                    type: number
+                    format: int32
+                    description: PlayerAddKill
+                    example: 0
+                  tdtc:
+                    type: number
+                    format: float
+                    description: PlayerHitDamage
+                    example: 2141
+                  rak:
+                    type: number
+                    description: Rank
+                    example: 3
+                  pts:
+                    type: number
+                    format: int64
+                    description: PlayTimeSeconds
+                    example: 1249
+                  bdt:
+                    type: number
+                    format: int64
+                    description: BattleDtm
+                    example: 1747433314130
+                  cht:
+                    type: number
+                    format: int32
+                    description: Chest
+                    example: 22031
+                  leg:
+                    type: number
+                    format: int32
+                    description: Leg
+                    example: 24016
+                  hed:
+                    type: number
+                    format: int32
+                    description: Head
+                    example: 21021
+                  wep:
+                    type: number
+                    format: int32
+                    description: Weapon
+                    example: 12054
+                  trk:
+                    type: number
+                    format: int32
+                    description: Trinket
+                    example: 25022
+                  arm:
+                    type: number
+                    format: int32
+                    description: Arm
+                    example: 23014
+                  pla:
+                    type: number
+                    format: int32
+                    description: Players
+                    example: 10
+                  mkc:
+                    type: number
+                    format: int32
+                    description: MonsterKill
+                    example: 4
+                  tdtm:
+                    type: number
+                    format: float
+                    description: MonsterHitDamage
+                    example: 785
+                  hea:
+                    type: number
+                    format: float
+                    description: Health
+                    example: 214
+                  sta:
+                    type: number
+                    format: float
+                    description: Stamina
+                    example: 198
+                  off:
+                    type: number
+                    format: float
+                    description: Offence
+                    example: 232.8
+                  def:
+                    type: number
+                    format: float
+                    description: Defence
+                    example: 221
+                  gfa:
+                    type: number
+                    format: float
+                    description: GunFamiliarity
+                    example: 65
+                  bfa:
+                    type: number
+                    format: float
+                    description: BladeFamiliarity
+                    example: 55
+                  tfa:
+                    type: number
+                    format: float
+                    description: ThrowFamiliarity
+                    example: 55
+                  pfa:
+                    type: number
+                    format: float
+                    description: PunchFamiliarity
+                    example: 55.5
+                  wfa:
+                    type: number
+                    format: float
+                    description: BowFamiliarity
+                    example: 55
+                  lfa:
+                    type: number
+                    format: float
+                    description: BluntFamiliarity
+                    example: 157
+                  sfa:
+                    type: number
+                    format: float
+                    description: StabFamiliarity
+                    example: 55
+                  clv:
+                    type: number
+                    format: int32
+                    description: CharacterLevel
+                    example: 16
+                  inventoryItems:
+                    type: array
+                    description: InventoryItems
+                    items:
+                      type: number
+                      format: int32
+                    example: [1001, 2003, 3005]
+                  gmd:
+                    type: number
+                    format: int32
+                    description: GameMode
+                    example: 20
+                  psid:
+                    type: number
+                    format: int32
+                    description: PotentialSkill
+                    example: 6005
+                  kut:
+                    type: number
+                    format: int32
+                    description: KillerUnitType
+                    example: 1
+                  asc:
+                    type: number
+                    format: int32
+                    description: AssistCount
+                    example: 0
+                  ddc:
+                    type: number
+                    format: int32
+                    description: DeadCount
+                    example: 0
+                  rts:
+                    type: number
+                    format: int32
+                    description: RedTeamScore
+                    example: 0
+                  bts:
+                    type: number
+                    format: int32
+                    description: BlueTeamScore
+                    example: 0
+                  tnm:
+                    type: number
+                    format: int32
+                    description: TeamNumber
+                    example: 0
+                  mpk:
+                    type: number
+                    format: int32
+                    description: MainPerk
+                    example: 20001
+                  fpk:
+                    type: number
+                    format: int32
+                    description: FirstPerk
+                    example: 20101
+                  spk:
+                    type: number
+                    format: int32
+                    description: SecondPerk
+                    example: 20202
+
+    MostPlayedCharacter:
+      allOf:
+        - $ref: "#/components/schemas/Response"
+        - type: object
+      properties:
+        Rst:
+          type: object
+          properties:
+            characterPlayCount:
+              type: object
+              properties:
+                t: 
+                  description: Total Play Account
+                  type: number
+                  format: int32
+                  example: 94
+                m: 
+                  description: most Played Character Count
+                  type: number
+                  format: int32
+                  example: 8
+                c: 
+                  description: Most Played Character
+                  type: number
+                  format: int32
+                  example: 48
+                w: 
+                  description: Win Count
+                  type: number
+                  format: int32
+                  example: 16
+
+    Character: 
+      allOf:
+        - $ref: '#/components/schemas/Response'
+        - type: object
+          properties:
+            Rst:
+                type: object
+                properties:
+                  character:
+                    $ref: '#/components/schemas/CharacterInfo'
+                  characterSkins:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/CharacterSkin'
+                  characterSignatureList:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/CharacterSignature'
+                  characterDocument:
+                      $ref: '#/components/schemas/CharacterDocument'
+
+    CharacterInfo:
+        allOf:
+          - $ref: '#/components/schemas/Response'
+          - type: object
+            properties:
+              cnm:
+                description: CharacterNum
+                type: number
+                format: int32
+                example: 1
+              unm:
+                description: UserNum
+                type: number
+                format: int64
+                example: 322880808140537860
+              cls:
+                description: CharacterClass
+                type: number
+                format: int32
+                example: 23
+              crd:
+                description: CharacterGrade
+                type: number
+                format: int32
+                example: 5
+              ast:
+                description: ActiveCharacterSkinType
+                type: number
+                format: int32
+                example: 2301
+              cpt:
+                description: CharacterPurchaseType
+                type: number
+                format: int32
+                example: 2
+              unn:
+                description: UserNickName
+                type: string
+                example: "Tutsz"
+              ctt:
+                description: CharacterStatus
+                type: number
+                format: int32
+                example: 1
+              npc:
+                description: NormalPlayCount
+                type: number
+                format: int32
+                example: 0
+              nwc:
+                description: NormalWinCount
+                type: number
+                format: int32
+                example: 0
+              psi:
+                description: PotentialSkillId
+                type: number
+                format: int32
+                example: 0
+              l2d:
+                description: ActiveLive2D
+                type: boolean
+                example: false
+
+    CharacterSkin:
+            properties:
+              unm:
+                description: UserNum
+                type: number
+                format: int64
+                example: 322880808140537860
+              cls:
+                description: CharacterClass
+                type: number
+                format: int32
+                example: 0
+              ckt:
+                description: CharacterSkinType
+                type: number
+                format: int32
+                example: 2301
+              live:
+                description: ActiveLive2D
+                type: boolean
+                example: false
+              own:
+                description: Owned
+                type: boolean
+                example: false
+              setp:
+                description: ParentSkin
+                type: number
+                format: int32
+                example: 1
+
+    CharacterSignature:
+            properties:
+              cc:
+                description: CharacterClass
+                type: number
+                format: int32
+                example: 23
+              ats:
+                description: SignatureStateType
+                type: number
+                format: int32
+                example: 1
+              att:
+                description: SignatureType
+                type: number
+                format: int32
+                example: 101
+              lv:
+                description: Level
+                type: number
+                format: int32
+                example: 5
+
+    CharacterDocument:
+            properties:
+              unm:
+                description: UserNum
+                type: number
+                format: int64
+                example: 322880808140537860
+              cls:
+                description: CharacterClass
+                type: number
+                format: int32
+                example: 23
+              ptn:
+                description: Pattern
+                type: boolean
+                example: true
+              wks:
+                description: Weakness
+                type: boolean
+                example: true
+              lik:
+                description: CharacterLikeReward
+                type: boolean
+                example: true
+              itr:
+                description: InterviewReward
+                type: boolean
+                example: true
+
+    Error:
+      required:
+        - Cod
+        - Msg
+      type: object
+      properties:
+        Cod:
+          description: Error Code
+          type: number
+          format: int32
+          example: 404
+        Msg:
+          description: Error Message
+          type: string
+          example: not.found

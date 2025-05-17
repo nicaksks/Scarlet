@@ -1,0 +1,56 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Scarlet",
+  "icons": {
+    "library": "fontawesome"
+  },
+  "appearance": {
+    "default": "dark",
+    "strict": false
+  },
+  "colors": {
+    "primary": "#993438",
+    "light": "#993438",
+    "dark": "#993438"
+  },
+  "favicon": "/favicon.svg",
+  "search": {
+    "prompt": "profile, games e etc."
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Documentation",
+            "pages": [
+              "index",
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "/user",
+            "pages": [
+              "api-reference/endpoint/user/user",
+              "api-reference/endpoint/user/games",
+              "api-reference/endpoint/user/mostPlayedCharacter",
+              "api-reference/endpoint/user/character"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/icon.png",
+    "dark": "/logo/icon.png"
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/nicaksks",
+      "github": "https://github.com/nicaksks/scarlet"
+    }
+  }
+}
