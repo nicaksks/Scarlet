@@ -3,7 +3,7 @@ use serenity::all::{CreateEmbed, CreateEmbedAuthor, CreateEmbedFooter};
 use crate::constants;
 
 use models::most_played_character::MostPlayedCharacter;
-use models::profile::{Profile, User};
+use models::user::{Profile, User};
 use scarlet::models;
 
 pub struct EmbedProfile;

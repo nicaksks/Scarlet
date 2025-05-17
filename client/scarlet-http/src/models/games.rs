@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct Histories {
+pub struct Games {
     #[serde(rename = "newRequestArrived")]
     new_request_arrived: bool,
     #[serde(rename = "battleHistories")]

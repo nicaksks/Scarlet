@@ -21,9 +21,9 @@ func Start() {
 
 func routes() *beego.Namespace {
 	return beego.NewNamespace("/v1",
-		beego.NSNamespace("/profile",
-			beego.NSRouter("/:id", &controller.Profile{}, "get:Profile"),
-			beego.NSRouter("/:id/histories", &controller.Profile{}, "get:Histories"),
-			beego.NSRouter("/:id/mostPlayedCharacter", &controller.Profile{}, "get:MostPlayedCharacter"),
-			beego.NSRouter("/:id/character/:cn", &controller.Profile{}, "get:Character")))
+		beego.NSNamespace("/user",
+			beego.NSRouter("/:id", &controller.User{}, "get:User"),
+			beego.NSRouter("/:id/games", &controller.User{}, "get:Games"),
+			beego.NSRouter("/:id/mostPlayedCharacter", &controller.User{}, "get:MostPlayedCharacter"),
+			beego.NSRouter("/:id/character/:cn", &controller.User{}, "get:Character")))
 }

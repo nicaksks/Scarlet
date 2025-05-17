@@ -11,7 +11,7 @@ type User struct {
 	User Profile `json:"User"`
 }
 
-type Histories struct {
+type Games struct {
 	NewRequestArrived bool              `json:"newRequestArrived"`
 	BattleHistories   []BattleHistories `json:"battleHistories"`
 }

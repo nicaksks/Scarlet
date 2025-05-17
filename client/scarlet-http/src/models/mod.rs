@@ -1,5 +1,5 @@
-pub mod histories;
-pub mod profile;
+pub mod games;
+pub mod user;
 pub mod most_played_character;
 pub mod characters_info;
 

@@ -9,9 +9,9 @@ import (
 	"scarlet/internal/redis"
 )
 
-func Profile(region enum.Region, userNum string) (models.BSResponse[models.User], error) {
+func User(region enum.Region, userNum string) (models.BSResponse[models.User], error) {
 
-	cacheKey := fmt.Sprintf("%s_%s", "profile", userNum)
+	cacheKey := fmt.Sprintf("%s_%s", "user", userNum)
 	cached, err := redis.Get[models.User](cacheKey)
 
 	if err != nil {
@@ -19,7 +19,7 @@ func Profile(region enum.Region, userNum string) (models.BSResponse[models.User]
 		client := scarlet.HTTP[models.User]{
 			Region:   region,
 			UserNum:  userNum,
-			Endpoint: helpers.FormatEndpoint(enum.PROFILE, userNum),
+			Endpoint: helpers.FormatEndpoint(enum.USERPROFILE, userNum),
 			CacheKey: cacheKey,
 		}
 
@@ -30,14 +30,14 @@ func Profile(region enum.Region, userNum string) (models.BSResponse[models.User]
 	return cached, nil
 }
 
-func Histories(region enum.Region, userNum string) (models.BSResponse[models.Histories], error) {
+func Games(region enum.Region, userNum string) (models.BSResponse[models.Games], error) {
 
-	cacheKey := fmt.Sprintf("%s_%s", "histories", userNum)
-	cached, err := redis.Get[models.Histories](cacheKey)
+	cacheKey := fmt.Sprintf("%s_%s", "games", userNum)
+	cached, err := redis.Get[models.Games](cacheKey)
 
 	if err != nil {
 
-		client := scarlet.HTTP[models.Histories]{
+		client := scarlet.HTTP[models.Games]{
 			Region:   region,
 			UserNum:  userNum,
 			Endpoint: helpers.FormatEndpoint(enum.HISTORIES, userNum),

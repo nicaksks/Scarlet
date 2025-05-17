@@ -2,26 +2,26 @@ mod client;
 pub mod models;
 
 use crate::client::Client;
-use crate::models::histories::Histories;
-use crate::models::profile::User;
+use crate::models::games::Games;
+use crate::models::user::User;
 use crate::models::most_played_character::MostPlayedCharacter;
 use crate::models::characters_info::CharactersInfo;
 pub struct Scarlet;
 
 impl Scarlet {
     pub async fn profile(&self, user_num: String) -> Result<User, String> {
-        Client.get::<User>(format!("/profile/{}", user_num)).await
+        Client.get::<User>(format!("/user/{}", user_num)).await
     }
 
-    pub async fn histories(&self, user_num: String) -> Result<Histories, String> {
+    pub async fn games(&self, user_num: String) -> Result<Games, String> {
         Client
-            .get::<Histories>(format!("/profile/{}/histories", user_num))
+            .get::<Games>(format!("/user/{}/games", user_num))
             .await
     }
 
     pub async fn most_played_character(&self, user_num: String) -> Result<MostPlayedCharacter, String> {
         Client
-            .get::<MostPlayedCharacter>(format!("/profile/{}/mostPlayedCharacter", user_num))
+            .get::<MostPlayedCharacter>(format!("/user/{}/mostPlayedCharacter", user_num))
             .await
     }
 
@@ -31,7 +31,7 @@ impl Scarlet {
         character_num: String,
     ) -> Result<CharactersInfo, String> {
         Client
-            .get::<CharactersInfo>(format!("/profile/{}/character/{}", user_num, character_num))
+            .get::<CharactersInfo>(format!("/user/{}/character/{}", user_num, character_num))
             .await
     }
 }

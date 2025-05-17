@@ -10,14 +10,14 @@ import (
 	"github.com/beego/beego/v2/server/web"
 )
 
-type Profile struct {
+type User struct {
 	web.Controller
 	region       enum.Region
 	userNum      string
 	characterNum string
 }
 
-func (c *Profile) Prepare() {
+func (c *User) Prepare() {
 	region := c.Ctx.Input.Query("r")
 
 	c.region = utils.GetRegion[region]
@@ -25,8 +25,8 @@ func (c *Profile) Prepare() {
 	c.characterNum = c.Ctx.Input.Param(":cn")
 }
 
-func (c *Profile) Profile() {
-	response, err := controller.Profile(c.region, c.userNum)
+func (c *User) User() {
+	response, err := controller.User(c.region, c.userNum)
 
 	if err != nil {
 		c.Ctx.ResponseWriter.WriteHeader(http.StatusNotFound)
@@ -37,8 +37,8 @@ func (c *Profile) Profile() {
 	c.Ctx.JSONResp(response)
 }
 
-func (c *Profile) Histories() {
-	response, err := controller.Histories(c.region, c.userNum)
+func (c *User) Games() {
+	response, err := controller.Games(c.region, c.userNum)
 
 	if err != nil {
 		c.Ctx.ResponseWriter.WriteHeader(http.StatusNotFound)
@@ -49,7 +49,7 @@ func (c *Profile) Histories() {
 	c.Ctx.JSONResp(response)
 }
 
-func (c *Profile) MostPlayedCharacter() {
+func (c *User) MostPlayedCharacter() {
 	response, err := controller.MostPlayedCharacter(c.region, c.userNum)
 
 	if err != nil {
@@ -61,7 +61,7 @@ func (c *Profile) MostPlayedCharacter() {
 	c.Ctx.JSONResp(response)
 }
 
-func (c *Profile) Character() {
+func (c *User) Character() {
 	response, err := controller.CharacterInfo(c.region, c.userNum, c.characterNum)
 
 	if err != nil {
