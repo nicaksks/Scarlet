@@ -78,6 +78,7 @@ class ContentDeliveryNetwork extends FolderScanner
     private function load_image(string $fileName): void
     {
         if (!file_exists($fileName)) {
+            http_response_code(404);
             header("Content-type: application/json");
             echo json_encode(array("Cod" => 404, "Msg" => "image.not.found"));
             return;
